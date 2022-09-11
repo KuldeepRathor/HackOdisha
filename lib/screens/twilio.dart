@@ -59,7 +59,7 @@ class _TwilioState extends State<Twilio> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: sendSms,
+          onPressed: sendWhatsApp,
           tooltip: 'Send Sms',
           child: Icon(Icons.send),
         ),

@@ -1,6 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hackodisha/screens/registration_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../bt_navbar.dart';
@@ -18,6 +18,7 @@ class Onboard extends StatelessWidget {
     'Track your transaction easily,with categories and financial report ',
     'Setup your budget for each category so you in control'
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -31,9 +32,9 @@ class Onboard extends StatelessWidget {
                   controller: controller,
                   itemBuilder: (context, index) {
                     return Onboardcontent(
-                    title: list[index],
-                    description: des[index],
-                  );
+                      title: list[index],
+                      description: des[index],
+                    );
                   },
                   itemCount: list.length,
                 ),
@@ -63,7 +64,7 @@ class Onboard extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => BtNavigationBar(),
+                              builder: (context) => RegistrationPage(),
                             ));
                       },
                       child: const Text('Sign Up'),
@@ -104,6 +105,7 @@ class Onboardcontent extends StatelessWidget {
     required this.description,
   }) : super(key: key);
   final String title, description;
+
   @override
   Widget build(BuildContext context) {
     return Column(

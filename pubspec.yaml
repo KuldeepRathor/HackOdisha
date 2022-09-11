@@ -44,6 +44,9 @@ dependencies:
   flutter_native_splash: ^2.2.3+1
   alan_voice: ^3.6.0
   twilio_flutter: ^0.0.9
+  contacts_service: ^0.6.3
+  cloud_firestore: ^3.4.7
+  firebase_auth: ^3.8.0
 
 dev_dependencies:
   flutter_test:
