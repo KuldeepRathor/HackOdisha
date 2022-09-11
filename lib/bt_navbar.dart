@@ -3,6 +3,7 @@ import 'package:alan_voice/alan_voice.dart';
 import 'package:hackodisha/screens/Profile.dart';
 import 'package:hackodisha/screens/homepage.dart';
 import 'package:hackodisha/screens/split_bill.dart';
+import 'package:hackodisha/screens/twilio.dart';
 
 class BtNavigationBar extends StatefulWidget {
   const BtNavigationBar({Key? key}) : super(key: key);
@@ -16,23 +17,17 @@ class _BtNavigationBarState extends State<BtNavigationBar> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(title: "homescreen"),
     Split_Bill(title: 'Split-Bill'),
-
-    // Text(
-    //   "Split Bill",
-    //   style: TextStyle(color: Colors.white),
-    // ),
-    Text(
-      "-Community",
-      style: TextStyle(color: Colors.white),
-    ),
+    Twilio(title: 'Twilio'),
     Profilepage(),
   ];
-  _BtNavigationBarState(){
+
+  _BtNavigationBarState() {
     AlanVoice.addButton(
         "9425b8755ef7dbadb27e9005ab11a6952e956eca572e1d8b807a3e2338fdd0dc/stage",
         buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT);
     //AlanVoice.playText("Hi" );
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
