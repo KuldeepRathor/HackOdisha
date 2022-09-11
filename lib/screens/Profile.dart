@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hackodisha/widgets/credit_card.dart';
 
 import 'Onboardscreen.dart';
 
@@ -140,7 +141,7 @@ class Profilepage extends StatelessWidget {
                         child: Column(
                           children: [
                             Row(
-                              children: const [
+                              children:  [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                                   child: Text(
@@ -148,11 +149,19 @@ class Profilepage extends StatelessWidget {
                                     style: TextStyle(fontSize: 18),
                                   ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(150, 10, 10, 0),
-                                  child: Icon(
-                                    Icons.add,
-                                    size: 24,
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => UserCard()));
+                                  },
+                                  child: Padding(
+                                    padding: EdgeInsets.fromLTRB(150, 10, 10, 0),
+                                    child: Icon(
+                                      Icons.add,
+                                      size: 24,
+                                    ),
                                   ),
                                 ),
                               ],
