@@ -18,7 +18,7 @@ class _TwilioState extends State<Twilio> {
   void initState() {
     twilioFlutter = TwilioFlutter(
         accountSid: 'AC8837a1ff5324b1a057d04add590bf346',
-        authToken: '5853d4a53ffebbad7d57f792777fb9c3',
+        authToken: 'a1aca99d91df13c137e495936ee9f4ed',
         twilioNumber: '+18086463642');
     super.initState();
   }
