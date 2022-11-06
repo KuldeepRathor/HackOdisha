@@ -26,7 +26,7 @@ class _BtNavigationBarState extends State<BtNavigationBar> {
 
   _BtNavigationBarState() {
     AlanVoice.addButton(
-        "9425b8755ef7dbadb27e9005ab11a6952e956eca572e1d8b807a3e2338fdd0dc/stage",
+        "1ece5179c4e279556c32a6cd03dda31f2e956eca572e1d8b807a3e2338fdd0dc/stage",
         buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT);
     //AlanVoice.playText("Hi" );
   }
