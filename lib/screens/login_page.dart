@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackodisha/google%20signnin/sign_in_screen.dart';
 
 import '../bt_navbar.dart';
 
@@ -86,7 +87,7 @@ class LoginPage extends StatelessWidget {
                           onPressed: () { Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => BtNavigationBar(),
+                                builder: (context) => SignInScreen(),
                               ));},
                           child: const Text(
                             'Login',

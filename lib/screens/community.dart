@@ -1,5 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
+final Uri _meetlink = Uri.parse('https://www.kaspersky.com/resource-center/definitions/what-is-cryptocurrency');
 
 class CommunityPage extends StatelessWidget {
   const CommunityPage({Key? key}) : super(key: key);
@@ -39,35 +43,41 @@ class CommunityPage extends StatelessWidget {
                   )
                 ],
               ),
-              CarouselSlider(
-                options: CarouselOptions(
-                  height: 1000.0,
-                  scrollDirection: Axis.vertical,
+              InkWell(
+                onTap: _launchUrl,
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    height: 1000.0,
+                    scrollDirection: Axis.vertical,
+                  ),
+                  items: [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                  ].map((i) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/image$i.jpeg"),
+                                fit: BoxFit.cover),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        );
+                      },
+                    );
+                  }).toList(),
                 ),
-                items: [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5,
-                  6,
-                  7,
-                ].map((i) {
-                  return Builder(
-                    builder: (BuildContext context) {
-                      return Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("assets/images/image$i.jpeg"),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      );
-                    },
-                  );
-                }).toList(),
               ),
             ],
           ),
@@ -76,6 +86,13 @@ class CommunityPage extends StatelessWidget {
     );
   }
 }
+
+Future<void> _launchUrl() async {
+  if (!await launchUrl(_meetlink,mode: LaunchMode.externalApplication)) {
+    throw 'Could not launch $_meetlink';
+  }
+}
+
 
 // class ImageSlider extends StatelessWidget {
 //   @override
