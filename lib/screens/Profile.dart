@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackodisha/widgets/credit_card.dart';
@@ -153,8 +154,9 @@ class Profilepage extends StatelessWidget {
                                   onTap: () {
                                     Navigator.push(
                                         context,
-                                        MaterialPageRoute(
-                                            builder: (context) => UserCard()));
+                                        CupertinoPageRoute(
+                                          builder: (context) => UserCard(),
+                                        ));
                                   },
                                   child: Padding(
                                     padding: EdgeInsets.fromLTRB(150, 10, 10, 0),

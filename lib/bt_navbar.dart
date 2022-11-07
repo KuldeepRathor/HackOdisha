@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:alan_voice/alan_voice.dart';
 import 'package:hackodisha/screens/Profile.dart';
-import 'package:hackodisha/screens/contacts.dart';
+import 'package:hackodisha/screens/community.dart';
 import 'package:hackodisha/screens/homepage.dart';
 import 'package:hackodisha/screens/split_bill.dart';
-import 'package:hackodisha/screens/twilio.dart';
 
 class BtNavigationBar extends StatefulWidget {
   const BtNavigationBar({Key? key}) : super(key: key);
@@ -17,10 +16,10 @@ class _BtNavigationBarState extends State<BtNavigationBar> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(title: "homescreen"),
-    // Split_Bill(title: 'Split-Bill'),
-    Contacts(),
+    Split_Bill(title: 'Split-Bill'),
+    //Contacts(),
 
-    Twilio(title: 'Twilio'),
+    CommunityPage(),
     Profilepage(),
   ];
 
